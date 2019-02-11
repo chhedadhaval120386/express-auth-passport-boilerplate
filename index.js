@@ -11,9 +11,9 @@ const {
   DB_NAME,
   DB_PORT,
   DB_USER,
-  DB_PASSWORD
+  DB_PASSWORD,
+  port
 } = require('./configs');
-const { port } = require('./configs');
 
 app.use(morgan('combined'));
 app.use(bodyParser.json({ type: '*/*' }));
