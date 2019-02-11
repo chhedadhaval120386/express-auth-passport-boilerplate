@@ -1,6 +1,7 @@
 const express = require('express');
 const http = require('http');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const morgan = require('morgan');
 const app = express();
 const mongoose = require('mongoose');
@@ -15,6 +16,7 @@ const {
   port
 } = require('./configs');
 
+app.use(cors());
 app.use(morgan('combined'));
 app.use(bodyParser.json({ type: '*/*' }));
 router(app);
